@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/yooncobra/node-start/issues"
   },
-  "homepage": "https://github.com/yooncobra/node-start#readme"
+  "homepage": "https://github.com/yooncobra/node-start#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2"
+  }
 }
