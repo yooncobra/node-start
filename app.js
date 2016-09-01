@@ -1,11 +1,16 @@
 var http = require("http");
+var router = require("./router");
+
 
 //http Status(200): OK, send response "hello world"
-http.createServer(function(request, response) {
-    response.writeHead(200, {"Content-Type":"text/plain"});
-    response.write("hello world \n");
-    response.end();
-}).listen(3030);
+var app = http.createServer(function(req, res) {
+    console.log(req.url);
 
-console.log("Server is running at localhost:3030");
+    router.home(req, res);
+    router.detail(req, res);
+});
+
+app.listen(3030, function (){
+  console.log("Server is running at localhost:3030");
+});
 
